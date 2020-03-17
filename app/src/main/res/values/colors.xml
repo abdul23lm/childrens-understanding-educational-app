@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!--
+       Tutorial Three Content and After creating the Drawable files
+       for the button Backgrounds
+    -->
+
+    <color name="colorPrimary">#52A5FF</color>
+    <color name="colorPrimaryDark">#E9C225</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="red">#FF0000</color>
+</resources>
