@@ -1,4 +1,4 @@
-package com.dinocodeacademy.GameEdukasiPemahamanAnak;
+package com.androidproject.GameEdukasiPemahamanAnak;
 
 import org.junit.Test;
 

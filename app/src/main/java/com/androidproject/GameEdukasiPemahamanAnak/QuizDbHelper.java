@@ -1,4 +1,4 @@
-package com.dinocodeacademy.GameEdukasiPemahamanAnak;
+package com.androidproject.GameEdukasiPemahamanAnak;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -6,7 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import com.dinocodeacademy.GameEdukasiPemahamanAnak.QuizContract.*;
+import com.androidproject.GameEdukasiPemahamanAnak.QuizContract.*;
 
 import java.util.ArrayList;
 

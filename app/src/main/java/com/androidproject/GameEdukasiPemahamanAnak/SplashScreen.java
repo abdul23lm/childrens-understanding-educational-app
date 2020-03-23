@@ -1,4 +1,4 @@
-package com.dinocodeacademy.GameEdukasiPemahamanAnak;
+package com.androidproject.GameEdukasiPemahamanAnak;
 
 import android.content.Intent;
 import android.support.annotation.Nullable;
