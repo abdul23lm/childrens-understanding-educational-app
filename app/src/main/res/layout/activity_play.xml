@@ -20,13 +20,10 @@
         android:textColor="#F3EEEE"
         android:textSize="32sp"/>
     <ImageView
-        android:layout_width="300dp"
-        android:layout_height="300dp"
+        android:layout_width="264dp"
+        android:layout_height="264dp"
         android:layout_marginBottom="30dp"
-        android:src="@drawable/elipse"
-        android:textColor="#000"
-        android:textSize="40sp"
-        android:textStyle="bold" />
+        android:src="@drawable/logo" />
 
     <Button
         android:id="@+id/bt_playbutton"
