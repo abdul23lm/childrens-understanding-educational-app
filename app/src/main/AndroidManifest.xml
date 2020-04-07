@@ -9,10 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.androidproject.GameEdukasiPemahamanAnak.QuizActivity"/>
+        <activity android:name="com.androidproject.GameEdukasiPemahamanAnak.MathQuiz"/>
+        <activity android:name="com.androidproject.GameEdukasiPemahamanAnak.IndoQuiz"/>
+        <activity android:name="com.androidproject.GameEdukasiPemahamanAnak.EnglishQuiz"/>
         <activity android:name="com.androidproject.GameEdukasiPemahamanAnak.PlayActivity" />
-        <activity android:name="com.androidproject.GameEdukasiPemahamanAnak.ResultActivity" />
+        <activity android:name="com.androidproject.GameEdukasiPemahamanAnak.MathResultActivity" />
+        <activity android:name="com.androidproject.GameEdukasiPemahamanAnak.ChooseQuiz"/>
         <activity android:name="com.androidproject.GameEdukasiPemahamanAnak.SplashScreen">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

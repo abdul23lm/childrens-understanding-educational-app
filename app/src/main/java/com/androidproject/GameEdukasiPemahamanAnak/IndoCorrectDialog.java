@@ -8,19 +8,19 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class CorrectDialog {
+public class IndoCorrectDialog {
 
     private Context mContext;
 
     private Dialog correctDialog;
 
-    private QuizActivity mquizActivity;
+    private IndoQuiz mquizActivity;
 
-    public CorrectDialog(Context mContext) {
+    public IndoCorrectDialog(Context mContext) {
         this.mContext = mContext;
     }
 
-    public void correctDialog(int score, final QuizActivity quizActivity){
+    public void correctDialog(int score, final IndoQuiz quizActivity){
 
         mquizActivity = quizActivity;
 

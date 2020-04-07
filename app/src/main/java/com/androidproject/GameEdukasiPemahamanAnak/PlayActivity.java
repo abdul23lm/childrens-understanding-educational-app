@@ -26,7 +26,7 @@ public class PlayActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(PlayActivity.this, QuizActivity.class);
+                Intent intent = new Intent(PlayActivity.this, ChooseQuiz.class);
                 startActivity(intent);
 
             }
@@ -55,7 +55,7 @@ public class PlayActivity extends AppCompatActivity {
 
         }else  {
 
-            Toast.makeText(this, "Press Again to Exit", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Tekan lagi untuk keluar", Toast.LENGTH_SHORT).show();
         }
         backPressedTime = System.currentTimeMillis();
     }

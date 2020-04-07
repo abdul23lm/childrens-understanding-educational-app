@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class ResultActivity extends AppCompatActivity {
+public class MathResultActivity extends AppCompatActivity {
 
     TextView txtHighScore;
     TextView txtTotalQuizQues,txtCorrectQues,txtWrongQues;
@@ -26,7 +26,7 @@ public class ResultActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_result);
+        setContentView(R.layout.activity_math_result);
 
 
         btMainMenu = findViewById(R.id.result_bt_mainmenu);
@@ -41,7 +41,7 @@ public class ResultActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(ResultActivity.this,PlayActivity.class);
+                Intent intent = new Intent(MathResultActivity.this,PlayActivity.class);
                 startActivity(intent);
 
             }
@@ -52,7 +52,7 @@ public class ResultActivity extends AppCompatActivity {
             public void onClick(View v) {
 
 
-                Intent intent = new Intent(ResultActivity.this,QuizActivity.class);
+                Intent intent = new Intent(MathResultActivity.this, ChooseQuiz.class);
                 startActivity(intent);
             }
         });
@@ -105,7 +105,7 @@ public class ResultActivity extends AppCompatActivity {
     public void onBackPressed() {
         if (backPressedTime + 2000 > System.currentTimeMillis()){
 
-            Intent intent = new Intent(ResultActivity.this,PlayActivity.class);
+            Intent intent = new Intent(MathResultActivity.this,PlayActivity.class);
             startActivity(intent);
 
         }else {

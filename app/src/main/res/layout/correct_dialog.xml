@@ -3,31 +3,28 @@
     android:orientation="vertical"
     android:layout_width="wrap_content"
     android:layout_gravity="center"
-    android:background="@drawable/correct_answer_dialog"
+    android:background="@drawable/popup_benar"
     android:layout_height="wrap_content">
-
-
-
 
     <TextView
         android:id="@+id/text_score"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Correct Ans: "
+        android:text="Jawaban Benar: "
         android:singleLine="true"
         android:ellipsize="end"
         android:layout_gravity="center"
         android:textSize="25sp"
         android:textStyle="bold"
         android:textColor="#FFFFFF"
-        android:layout_marginTop="160dp"
+        android:layout_marginTop="260dp"
         android:padding="20dp"
         />
 
     <Button
         android:id="@+id/bt_correct_dialog"
         android:layout_width="wrap_content"
-        android:background="#37BB07"
+        android:background="#00E545"
         android:text="OK"
         android:textStyle="bold"
         android:textColor="#FFFFFF"

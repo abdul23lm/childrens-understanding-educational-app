@@ -8,28 +8,28 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class WrongDialog {
+public class MathWrongDialog {
 
 
     private Context mContext;
 
     private Dialog wrongDialog;
 
-    private QuizActivity mquizActivity;
+    private MathQuiz mquizActivity;
 
-    public WrongDialog(Context mContext) {
+    public MathWrongDialog(Context mContext) {
         this.mContext = mContext;
     }
 
 
-    public void wrongDialog(String correctAnswer,final QuizActivity quizActivity){
+    public void wrongDialog(String correctAnswer,final MathQuiz quizActivity){
         mquizActivity = quizActivity;
         wrongDialog = new Dialog(mContext);
         wrongDialog.setContentView(R.layout.wrong_dialog);
         Button btWrongDialog = (Button) wrongDialog.findViewById(R.id.bt_wrong_dialog);
         TextView textViewCorrectAnswer = (TextView) wrongDialog.findViewById(R.id.text_correct_ans);
 
-        textViewCorrectAnswer.setText("Correct Ans: " + String.valueOf(correctAnswer));
+        textViewCorrectAnswer.setText("Jawaban Benar: " + String.valueOf(correctAnswer));
 
         btWrongDialog.setOnClickListener(new View.OnClickListener() {
             @Override

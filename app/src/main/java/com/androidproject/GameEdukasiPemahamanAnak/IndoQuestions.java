@@ -1,24 +1,22 @@
 package com.androidproject.GameEdukasiPemahamanAnak;
 
-public class Questions {
+public class IndoQuestions {
 
     private String question;
     private String option1;
     private String option2;
     private String option3;
-    private String option4;
     private int answerNr;
 
-    public Questions(){
+    public IndoQuestions(){
 
     }
 
-    public Questions(String question, String option1, String option2, String option3, String option4, int answerNr) {
+    public IndoQuestions(String question, String option1, String option2, String option3, int answerNr) {
         this.question = question;
         this.option1 = option1;
         this.option2 = option2;
         this.option3 = option3;
-        this.option4 = option4;
         this.answerNr = answerNr;
     }
 
@@ -52,14 +50,6 @@ public class Questions {
 
     public void setOption3(String option3) {
         this.option3 = option3;
-    }
-
-    public String getOption4() {
-        return option4;
-    }
-
-    public void setOption4(String option4) {
-        this.option4 = option4;
     }
 
     public int getAnswerNr() {

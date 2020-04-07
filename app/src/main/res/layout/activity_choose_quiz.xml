@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:padding="5dp"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_3"
+    tools:context=".ChooseQuiz">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:layout_marginLeft="20dp"
+        android:layout_marginVertical="40dp"
+        android:textSize="28dp"
+        android:layout_marginTop="10dp"
+        android:text="Hallo, Aliffia"
+        />
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="60dp"
+        android:gravity="center"
+        android:orientation="vertical"
+
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Mulai Latihan Pilih Mata Pelajaran"
+            android:textColor="#FFFFFF"
+            android:textSize="32dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:layout_marginStart="26dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="@drawable/bg_4">
+        <Button
+            android:id="@+id/button_math"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="Matematika"
+            android:textSize="26dp"
+            android:textColor="#FFFBFB"
+            android:layout_marginStart="30dp"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:background="#52A5FF"
+            />
+        <Button
+            android:id="@+id/button_indo"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="Bahasa Indonesia"
+            android:textSize="22dp"
+            android:textColor="#FFFBFB"
+            android:layout_marginStart="30dp"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:background="#52A5FF"
+            />
+        <Button
+            android:id="@+id/button_english"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="Bahasa Inggris"
+            android:textSize="26dp"
+            android:textColor="#FFFBFB"
+            android:layout_marginStart="30dp"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:background="#52A5FF"
+            />
+
+
+    </LinearLayout>
+</LinearLayout>

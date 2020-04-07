@@ -11,14 +11,14 @@
 
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="120dp"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:textStyle="bold"
-        android:text="Game Edukasi Melihat Potensi Belajar Pada Anak"
+        android:text="Game Edukasi Mengetahui Pemahaman Belajar Pada Anak"
         android:textAlignment="center"
         android:textColor="#F3EEEE"
-        android:textSize="32sp"/>
+        android:textSize="32dp"/>
     <ImageView
         android:layout_width="264dp"
         android:layout_height="264dp"
@@ -32,8 +32,10 @@
         android:layout_marginTop="20dp"
         android:background="@drawable/button_play_bg"
         android:padding="10dp"
-        android:text="Play"
+        android:text="Mulai"
         android:textAllCaps="false"
         android:textColor="#F3EEEE"
-        android:textSize="40sp" />
+        android:textSize="32dp"
+        android:textStyle="bold"
+        />
 </LinearLayout>
