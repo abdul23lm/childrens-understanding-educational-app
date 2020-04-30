@@ -3,47 +3,53 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:padding="5dp"
     android:orientation="vertical"
     android:layout_height="match_parent"
+    android:gravity="center"
+    android:padding="20dp"
     android:background="@drawable/main_bg"
     tools:context=".TutorialGame">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="-120dp"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="vertical">
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:gravity="center"
             android:text="Cara Bermain"
             android:textColor="#FFFFFF"
             android:textSize="32dp"
+            android:layout_marginTop="80dp"
             android:layout_marginBottom="20dp"
             android:textStyle="bold" />
         <ImageView
-            android:layout_width="360dp"
-            android:layout_height="300dp"
+            android:layout_width="320dp"
+            android:layout_height="400dp"
             android:background="@drawable/tutorial"/>
-
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:gravity="center"
-            android:text="Penilaian/Skor"
-            android:textColor="#FFFFFF"
+            android:layout_height="match_parent"
+            android:textColor="#fff"
             android:textSize="32dp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:text="Semangat!!!"/>
 
-        <ImageView
-            android:layout_width="360dp"
-            android:layout_height="220dp"
-            android:layout_gravity="center"
-            android:background="@drawable/skor"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="#fff"
+            android:textSize="24dp"
+            android:textAlignment="center"
+            android:text="Kerjakan dengan sungguh-sungguh ya^_^"/>
+
+
+        
 
     </LinearLayout>
 

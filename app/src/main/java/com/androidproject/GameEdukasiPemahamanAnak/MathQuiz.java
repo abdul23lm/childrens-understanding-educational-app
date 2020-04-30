@@ -2,46 +2,54 @@ package com.androidproject.GameEdukasiPemahamanAnak;
 
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Base64;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
+
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Collections;
 
 
 public class MathQuiz extends AppCompatActivity {
 
-
     private RadioGroup rbGroup;
     private RadioButton rb1;
     private RadioButton rb2;
     private RadioButton rb3;
+    private RadioButton rb4;
     private Button buttonConfirmNext;
 
 
-    
     private TextView textViewQuestion;
     private TextView textViewScore;
     private TextView textViewQuestionCount;
-
 
     private ArrayList<MathQuestions> questionList;
     private int questionCounter;
     private int questionTotalCount;
     private MathQuestions currentQuestions;
     private boolean answerd;
-    
-    
+
+
     private final Handler handler = new Handler();
 
 
@@ -49,6 +57,8 @@ public class MathQuiz extends AppCompatActivity {
 
     private MathCorrectDialog correctDialog;
     private MathWrongDialog wrongDialog;
+
+
 
     private PlayAudioForAnswers playAudioForAnswers;
 
@@ -58,17 +68,23 @@ public class MathQuiz extends AppCompatActivity {
 
     private int totalSizeofQuiz=0;
 
+
     private long backPressedTime;
+    ImageView imgQuest;
+
+    TextView tvNama;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_math_quiz);
-        
+        tvNama = findViewById(R.id.edt_nama);
+        tvNama.setText("Halo, "+ Preferences.getLoggedInUser(getBaseContext()));
+
         setupUI();
 
         fetchDB();
-        Log.i("BUGBUG","onCreate() in QuizActivity");
+        Log.i("BUGBUG","onCreate() in MathQuiz");
 
 
         correctDialog = new MathCorrectDialog(this);
@@ -77,10 +93,10 @@ public class MathQuiz extends AppCompatActivity {
     }
 
 
-
     private void setupUI(){
+        imgQuest = findViewById(R.id.img_quest);
         textViewQuestion = findViewById(R.id.txtQuestionContainer);
-        
+
         textViewScore = findViewById(R.id.txtScore);
         textViewQuestionCount = findViewById(R.id.txtTotalQuestion);
 
@@ -91,75 +107,77 @@ public class MathQuiz extends AppCompatActivity {
         buttonConfirmNext = findViewById(R.id.button);
     }
 
+
     public void fetchDB() {
         MathQuizDbHelper dbHelper = new MathQuizDbHelper(this);
         questionList = dbHelper.getAllQuestions();
         startQuiz();
-     
-    }
-    
 
-     public void startQuiz() {
+    }
+
+    public void startQuiz() {
+
 
         questionTotalCount = questionList.size();
-        Collections.shuffle(questionList);
-       
-        showQuestions();   // calling showQuestion() method
+
+
+            Collections.shuffle(questionList);
+        try {
+            showQuestions();   // calling showQuestion() method
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+        rbGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+                switch (checkedId){
+
+                    case R.id.radio_button1:
+
+                        rb1.setTextColor(ContextCompat.getColor(getApplicationContext(),R.color.white));
+                        rb2.setTextColor(Color.BLACK);
+                        rb3.setTextColor(Color.BLACK);
+
+
+                        rb1.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.when_answer_selected));
+                        rb2.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.option_default_background));
+                        rb3.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.option_default_background));
+
+                        break;
+                    case R.id.radio_button2:
+                        rb2.setTextColor(ContextCompat.getColor(getApplicationContext(),R.color.white));
+
+                        rb1.setTextColor(Color.BLACK);
+                        rb3.setTextColor(Color.BLACK);
 
 
 
-         rbGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-             @Override
-             public void onCheckedChanged(RadioGroup group, int checkedId) {
+                        rb2.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.when_answer_selected));
+                        rb1.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.option_default_background));
+                        rb3.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.option_default_background));
+
+                        break;
+
+                    case R.id.radio_button3:
+                        rb3.setTextColor(ContextCompat.getColor(getApplicationContext(),R.color.white));
+                        rb2.setTextColor(Color.BLACK);
+                        rb1.setTextColor(Color.BLACK);
 
 
+                        rb3.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.when_answer_selected));
+                        rb2.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.option_default_background));
+                        rb1.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.option_default_background));
 
-                 switch (checkedId){
+                        break;
+                }
 
-                     case R.id.radio_button1:
+            }
+        });
 
-                         rb1.setTextColor(ContextCompat.getColor(getApplicationContext(),R.color.white));
-                         rb2.setTextColor(Color.BLACK);
-                         rb3.setTextColor(Color.BLACK);
-
-
-
-                         rb1.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.when_answer_selected));
-                         rb2.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.option_default_background));
-                         rb3.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.option_default_background));
-
-                     break;
-                     case R.id.radio_button2:
-                         rb2.setTextColor(ContextCompat.getColor(getApplicationContext(),R.color.white));
-
-                         rb1.setTextColor(Color.BLACK);
-                         rb3.setTextColor(Color.BLACK);
-
-
-
-                         rb2.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.when_answer_selected));
-                         rb1.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.option_default_background));
-                         rb3.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.option_default_background));
-
-                         break;
-
-                     case R.id.radio_button3:
-                         rb3.setTextColor(ContextCompat.getColor(getApplicationContext(),R.color.white));
-                         rb2.setTextColor(Color.BLACK);
-                         rb1.setTextColor(Color.BLACK);
-
-
-                         rb3.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.when_answer_selected));
-                         rb2.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.option_default_background));
-                         rb1.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.option_default_background));
-
-                         break;
-                 }
-
-             }
-         });
-
-         buttonConfirmNext.setOnClickListener(new View.OnClickListener() {
+        buttonConfirmNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -169,7 +187,7 @@ public class MathQuiz extends AppCompatActivity {
                         quizOperation();
                     } else {
 
-                        Toast.makeText(MathQuiz.this, "Please Select the Answer ", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MathQuiz.this, "Pilih jawaban ", Toast.LENGTH_SHORT).show();
                     }
                 }
             }
@@ -178,7 +196,7 @@ public class MathQuiz extends AppCompatActivity {
     }
 
 
-    public void showQuestions() {
+    public void showQuestions() throws IOException {
 
 
         rbGroup.clearCheck();
@@ -192,25 +210,29 @@ public class MathQuiz extends AppCompatActivity {
         rb3.setTextColor(Color.BLACK);
 
 
-        if (questionCounter < questionTotalCount) {
+        if (questionCounter < 10) {
             currentQuestions = questionList.get(questionCounter);
+            if (currentQuestions.getObject() != null) {
+                imgQuest.setVisibility(View.VISIBLE);
+                Glide.with(this).load(currentQuestions.getObject()).into(imgQuest);
+            }else{
+                imgQuest.setVisibility(View.GONE);
+            }
             textViewQuestion.setText(currentQuestions.getQuestion());
             rb1.setText(currentQuestions.getOption1());
             rb2.setText(currentQuestions.getOption2());
             rb3.setText(currentQuestions.getOption3());
 
+
             questionCounter++;
             answerd = false;
-            buttonConfirmNext.setText("Confirm");
+            buttonConfirmNext.setText("Lanjut");
 
-            textViewQuestionCount.setText("Questions: " + questionCounter + "/" + questionTotalCount);
+            textViewQuestionCount.setText("Soal Matematika " + questionCounter + "/ 10");
 
         } else {
 
-            // If Number of Questions Finishes then we need to finish the Quiz and Shows the User Quiz Performance
-
-
-            Toast.makeText(this, "Quiz Finshed", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Quiz Selesai", Toast.LENGTH_SHORT).show();
 
             rb1.setClickable(false);
             rb2.setClickable(false);
@@ -228,6 +250,7 @@ public class MathQuiz extends AppCompatActivity {
         }
     }
 
+
     private void quizOperation() {
         answerd = true;
 
@@ -237,7 +260,6 @@ public class MathQuiz extends AppCompatActivity {
         checkSolution(answerNr, rbselected);
 
     }
-
 
     private void checkSolution(int answerNr, RadioButton rbselected) {
 
@@ -249,19 +271,17 @@ public class MathQuiz extends AppCompatActivity {
                             this, R.drawable.correct_option_background));
                     rb1.setTextColor(Color.BLACK);
 
+
                     correctAns++;
 
 
-                    score += 20;
-                    textViewScore.setText("Score: " + String.valueOf(score));
+                    score += 10;
+                    textViewScore.setText("Skor: " + String.valueOf(score));
                     correctDialog.correctDialog(score,this);
 
 
                     FLAG = 1;
                     playAudioForAnswers.setAudioforAnswer(FLAG);
-
-
-
 
 
 
@@ -290,8 +310,8 @@ public class MathQuiz extends AppCompatActivity {
                     correctAns++;
 
 
-                    score += 20;
-                    textViewScore.setText("Score: " + String.valueOf(score));
+                    score += 10;
+                    textViewScore.setText("Skor: " + String.valueOf(score));
                     correctDialog.correctDialog(score,this);
 
                     FLAG = 1;
@@ -311,6 +331,8 @@ public class MathQuiz extends AppCompatActivity {
                     playAudioForAnswers.setAudioforAnswer(FLAG);
 
 
+
+
                 }
                 break;
             case 3:
@@ -323,8 +345,8 @@ public class MathQuiz extends AppCompatActivity {
                     correctAns++;
 
 
-                    score += 20;
-                    textViewScore.setText("Score: " + String.valueOf(score));
+                    score += 10;
+                    textViewScore.setText("Skor: " + String.valueOf(score));
                     correctDialog.correctDialog(score,this);
 
                     FLAG = 1;
@@ -360,38 +382,6 @@ public class MathQuiz extends AppCompatActivity {
         rbselected.setTextColor(Color.BLACK);
     }
 
-    @Override
-    protected void onRestart() {
-        super.onRestart();
-        Log.i("BUGBUG","onRestart() in QuizActivity");
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-        Log.i("BUGBUG","onStop() in QuizActivity");
-        finish();
-
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-
-        Log.i("BUGBUG","onPause() in QuizActivity");
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        Log.i("BUGBUG","onResume() in QuizActivity");
-    }
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-        Log.i("BUGBUG","onStart() in QuizActivity");
-    }
 
 
     private void finalResult(){
@@ -406,16 +396,15 @@ public class MathQuiz extends AppCompatActivity {
 
     }
 
-
     @Override
     public void onBackPressed() {
         if (backPressedTime + 2000 > System.currentTimeMillis()){
 
-            Intent intent = new Intent(MathQuiz.this,ChooseQuiz.class);
+            Intent intent = new Intent(MathQuiz.this, ChooseMenu.class);
             startActivity(intent);
 
         }else {
-            Toast.makeText(this, "Press Again to Exit", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Tekan lagi untuk kembali", Toast.LENGTH_SHORT).show();
 
         }
         backPressedTime = System.currentTimeMillis();

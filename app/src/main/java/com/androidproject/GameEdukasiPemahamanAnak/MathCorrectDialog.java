@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.io.IOException;
+
 public class MathCorrectDialog {
 
     private Context mContext;
@@ -20,9 +22,9 @@ public class MathCorrectDialog {
         this.mContext = mContext;
     }
 
-    public void correctDialog(int score, final MathQuiz quizActivity){
+    public void correctDialog(int score, final MathQuiz mathQuizActivity){
 
-        mquizActivity = quizActivity;
+        mquizActivity = mathQuizActivity;
 
         correctDialog = new Dialog(mContext);
         correctDialog.setContentView(R.layout.correct_dialog);
@@ -36,7 +38,11 @@ public class MathCorrectDialog {
             @Override
             public void onClick(View v) {
                 correctDialog.dismiss();
-                quizActivity.showQuestions();
+                try {
+                    mathQuizActivity.showQuestions();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
         });
 
@@ -51,7 +57,7 @@ public class MathCorrectDialog {
     private void score(int score) {
 
         TextView textViewScore = (TextView) correctDialog.findViewById(R.id.text_score);
-        textViewScore.setText("Score: " + String.valueOf(score));
+        textViewScore.setText("Skor: " + String.valueOf(score));
     }
 
 

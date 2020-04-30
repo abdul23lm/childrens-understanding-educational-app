@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="40dp"
     android:gravity="center"
     android:background="@drawable/main_bg"
     android:orientation="vertical"
@@ -11,14 +12,15 @@
 
 
     <TextView
-        android:layout_width="360dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:textStyle="bold"
-        android:text="Game Edukasi Mengetahui Pemahaman Belajar Pada Anak"
+        android:text="Game Edukasi Pemahaman Belajar Pada Anak"
         android:textAlignment="center"
         android:textColor="#F3EEEE"
-        android:textSize="32dp"/>
+        android:layout_marginBottom="40dp"
+        android:textSize="30dp"/>
     <ImageView
         android:layout_width="264dp"
         android:layout_height="264dp"

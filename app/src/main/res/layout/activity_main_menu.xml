@@ -7,7 +7,7 @@
     android:padding="30dp"
     android:layout_height="match_parent"
     android:background="@drawable/bg_3"
-    tools:context=".ChooseQuiz">
+    tools:context=".ChooseMenu">
 
 
     <TextView
@@ -22,28 +22,28 @@
         android:layout_marginTop="10dp"
         />
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:layout_marginBottom="60dp"
-        android:layout_centerInParent="true"
-        android:text="Mulai Latihan Pilih Mata Pelajaran"
-        android:textColor="#FFFFFF"
-        android:textSize="28dp"
-        android:textStyle="bold" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_marginBottom="60dp"
+            android:layout_centerInParent="true"
+            android:text="Pilih Menu Dibawah"
+            android:textColor="#FFFFFF"
+            android:textSize="28dp"
+            android:textStyle="bold" />
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="350dp"
+        android:layout_height="300dp"
         android:layout_margin="10dp"
         android:gravity="center"
         android:orientation="vertical"
         android:background="@drawable/bg_4">
         <Button
-            android:id="@+id/button_math"
+            android:id="@+id/button_play"
             android:layout_width="260dp"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
-            android:text="Matematika"
+            android:text="Mulai Game"
             android:textSize="20dp"
             android:textColor="#FFFBFB"
             android:textStyle="bold"
@@ -51,11 +51,11 @@
             android:background="#52A5FF"
             />
         <Button
-            android:id="@+id/button_indo"
+            android:id="@+id/button_about"
             android:layout_width="260dp"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
-            android:text="Bahasa Indonesia"
+            android:text="Tentang Game"
             android:textSize="20dp"
             android:textColor="#FFFBFB"
             android:textStyle="bold"
@@ -63,11 +63,11 @@
             android:background="#52A5FF"
             />
         <Button
-            android:id="@+id/button_english"
+            android:id="@+id/button_tutorial"
             android:layout_width="260dp"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
-            android:text="Bahasa Inggris"
+            android:text="Cara Bermain"
             android:textSize="20dp"
             android:textColor="#FFFBFB"
             android:textStyle="bold"
@@ -77,5 +77,20 @@
 
 
     </LinearLayout>
+
+  <Button
+        android:id="@+id/button_exit"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Keluar"
+        android:textSize="20sp"
+        android:textColor="#FFFBFB"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"
+        android:textStyle="bold"
+        android:padding="10dp"
+        android:background="#E9C225"
+      />
+
 
 </LinearLayout>

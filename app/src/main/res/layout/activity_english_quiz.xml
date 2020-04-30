@@ -7,9 +7,10 @@
     android:orientation="vertical"
     android:layout_height="match_parent"
     android:background="@drawable/bg_3"
-    tools:context=".EnglishQuiz">
+    tools:context=".IndoQuiz">
 
     <TextView
+        android:id="@+id/edt_nama"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textStyle="bold"
@@ -17,7 +18,6 @@
         android:layout_marginLeft="20dp"
         android:layout_marginVertical="40dp"
         android:textSize="28dp"
-        android:text="Hallo, Aliffia"
         />
 
     <TextView
@@ -29,7 +29,7 @@
         android:textAlignment="center"
         android:textSize="24dp"
         android:layout_marginTop="-32dp"
-        android:text="Soal Matematika: 1/5"
+        android:text="Soal Bahasa Indonesia: 1/10"
         />
 
     <LinearLayout
@@ -56,23 +56,32 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="350dp"
+        android:layout_width="match_parent"
         android:layout_height="420dp"
-        android:layout_marginStart="26dp"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
         android:gravity="center"
         android:orientation="vertical"
         android:background="@drawable/bg_4">
 
         >
+
+        <ImageView
+            android:id="@+id/img_quest"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:scaleType="fitXY"
+            android:visibility="gone"/>
+
         <TextView
             android:id="@+id/txtQuestionContainer"
-            android:layout_width="320dp"
-            android:gravity="center"
-            android:layout_height="150dp"
+            android:layout_width="wrap_content"
+            android:gravity=""
+            android:layout_height="80dp"
             android:layout_marginTop="18dp"
             android:background="@drawable/main_bg"
             android:text="Soal 1 Jawaban A?"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:textStyle="bold"
             android:textColor="#FFFFFF"
             android:layout_marginBottom="20dp"
@@ -85,13 +94,12 @@
 
             <RadioButton
                 android:id="@+id/radio_button1"
-                android:layout_width="320dp"
-                android:layout_height="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
                 android:layout_weight="1"
                 android:text="Option 1"
-                android:textSize="22sp"
+                android:textSize="20sp"
                 android:textColor="#fff"
-                android:textAlignment="center"
                 android:textStyle="bold"
                 android:button="@null"
                 android:freezesText="true"
@@ -101,14 +109,13 @@
 
             <RadioButton
                 android:id="@+id/radio_button2"
-                android:layout_width="320dp"
-                android:layout_height="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
                 android:layout_weight="1"
                 android:text="Option 2"
-                android:textSize="22sp"
+                android:textSize="20sp"
                 android:textColor="#fff"
                 android:background="#52A5FF"
-                android:textAlignment="center"
                 android:button="@null"
                 android:textStyle="bold"
                 android:freezesText="true"
@@ -119,20 +126,18 @@
 
             <RadioButton
                 android:id="@+id/radio_button3"
-                android:layout_width="320dp"
-                android:layout_height="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="7dp"
                 android:layout_weight="1"
                 android:text="Option 3"
-                android:textSize="22sp"
+                android:textSize="20sp"
                 android:textColor="#fff"
-                android:textAlignment="center"
                 android:button="@null"
                 android:textStyle="bold"
                 android:freezesText="true"
                 android:layout_marginTop="10dp"
                 android:padding="12dp"
                 android:background="#52A5FF"
-                android:layout_marginBottom="20dp"
                 />
 
         </RadioGroup>
@@ -151,7 +156,7 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:text="Lanjut"
-        android:textSize="25sp"
+        android:textSize="20sp"
         android:textColor="#FFFBFB"
         android:layout_gravity="center"
         android:layout_marginTop="26dp"

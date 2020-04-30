@@ -10,10 +10,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -29,7 +32,7 @@ public class IndoQuiz extends AppCompatActivity {
     private Button buttonConfirmNext;
 
 
-    
+
     private TextView textViewQuestion;
     private TextView textViewScore;
     private TextView textViewQuestionCount;
@@ -40,8 +43,8 @@ public class IndoQuiz extends AppCompatActivity {
     private int questionTotalCount;
     private IndoQuestions currentQuestions;
     private boolean answerd;
-    
-    
+
+
     private final Handler handler = new Handler();
 
 
@@ -60,11 +63,16 @@ public class IndoQuiz extends AppCompatActivity {
 
     private long backPressedTime;
 
+    TextView tvNama;
+    ImageView imgQuest;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_indo_quiz);
-        
+        tvNama = findViewById(R.id.edt_nama);
+        tvNama.setText("Halo, "+ Preferences.getLoggedInUser(getBaseContext()));
+
         setupUI();
 
         fetchDB();
@@ -80,7 +88,7 @@ public class IndoQuiz extends AppCompatActivity {
 
     private void setupUI(){
         textViewQuestion = findViewById(R.id.txtQuestionContainer);
-        
+
         textViewScore = findViewById(R.id.txtScore);
         textViewQuestionCount = findViewById(R.id.txtTotalQuestion);
 
@@ -89,77 +97,79 @@ public class IndoQuiz extends AppCompatActivity {
         rb2 = findViewById(R.id.radio_button2);
         rb3 = findViewById(R.id.radio_button3);
         buttonConfirmNext = findViewById(R.id.button);
+
+        imgQuest = findViewById(R.id.img_quest);
     }
 
     public void fetchDB() {
         IndoQuizDbHelper dbHelper = new IndoQuizDbHelper(this);
         questionList = dbHelper.getAllQuestions();
         startQuiz();
-     
-    }
-    
 
-     public void startQuiz() {
+    }
+
+
+    public void startQuiz() {
 
         questionTotalCount = questionList.size();
         Collections.shuffle(questionList);
-       
+
         showQuestions();   // calling showQuestion() method
 
 
 
-         rbGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-             @Override
-             public void onCheckedChanged(RadioGroup group, int checkedId) {
+        rbGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
 
 
 
-                 switch (checkedId){
+                switch (checkedId){
 
-                     case R.id.radio_button1:
+                    case R.id.radio_button1:
 
-                         rb1.setTextColor(ContextCompat.getColor(getApplicationContext(),R.color.white));
-                         rb2.setTextColor(Color.BLACK);
-                         rb3.setTextColor(Color.BLACK);
-
-
-
-                         rb1.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.when_answer_selected));
-                         rb2.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.option_default_background));
-                         rb3.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.option_default_background));
-
-                     break;
-                     case R.id.radio_button2:
-                         rb2.setTextColor(ContextCompat.getColor(getApplicationContext(),R.color.white));
-
-                         rb1.setTextColor(Color.BLACK);
-                         rb3.setTextColor(Color.BLACK);
+                        rb1.setTextColor(ContextCompat.getColor(getApplicationContext(),R.color.white));
+                        rb2.setTextColor(Color.BLACK);
+                        rb3.setTextColor(Color.BLACK);
 
 
 
-                         rb2.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.when_answer_selected));
-                         rb1.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.option_default_background));
-                         rb3.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.option_default_background));
+                        rb1.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.when_answer_selected));
+                        rb2.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.option_default_background));
+                        rb3.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.option_default_background));
 
-                         break;
+                        break;
+                    case R.id.radio_button2:
+                        rb2.setTextColor(ContextCompat.getColor(getApplicationContext(),R.color.white));
 
-                     case R.id.radio_button3:
-                         rb3.setTextColor(ContextCompat.getColor(getApplicationContext(),R.color.white));
-                         rb2.setTextColor(Color.BLACK);
-                         rb1.setTextColor(Color.BLACK);
+                        rb1.setTextColor(Color.BLACK);
+                        rb3.setTextColor(Color.BLACK);
 
 
-                         rb3.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.when_answer_selected));
-                         rb2.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.option_default_background));
-                         rb1.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.option_default_background));
 
-                         break;
-                 }
+                        rb2.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.when_answer_selected));
+                        rb1.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.option_default_background));
+                        rb3.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.option_default_background));
 
-             }
-         });
+                        break;
 
-         buttonConfirmNext.setOnClickListener(new View.OnClickListener() {
+                    case R.id.radio_button3:
+                        rb3.setTextColor(ContextCompat.getColor(getApplicationContext(),R.color.white));
+                        rb2.setTextColor(Color.BLACK);
+                        rb1.setTextColor(Color.BLACK);
+
+
+                        rb3.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.when_answer_selected));
+                        rb2.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.option_default_background));
+                        rb1.setBackground(ContextCompat.getDrawable(getApplicationContext(),R.drawable.option_default_background));
+
+                        break;
+                }
+
+            }
+        });
+
+        buttonConfirmNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -192,18 +202,24 @@ public class IndoQuiz extends AppCompatActivity {
         rb3.setTextColor(Color.BLACK);
 
 
-        if (questionCounter < questionTotalCount) {
+        if (questionCounter < 10) {
             currentQuestions = questionList.get(questionCounter);
             textViewQuestion.setText(currentQuestions.getQuestion());
+            if (currentQuestions.getObject() != null) {
+                imgQuest.setVisibility(View.VISIBLE);
+                Glide.with(this).load(currentQuestions.getObject()).into(imgQuest);
+            }else{
+                imgQuest.setVisibility(View.GONE);
+            }
             rb1.setText(currentQuestions.getOption1());
             rb2.setText(currentQuestions.getOption2());
             rb3.setText(currentQuestions.getOption3());
 
             questionCounter++;
             answerd = false;
-            buttonConfirmNext.setText("Confirm");
+            buttonConfirmNext.setText("Lanjut");
 
-            textViewQuestionCount.setText("Questions: " + questionCounter + "/" + questionTotalCount);
+            textViewQuestionCount.setText("Soal Bahasa Indonesia: " + questionCounter + "/" + 10);
 
         } else {
 
@@ -252,7 +268,7 @@ public class IndoQuiz extends AppCompatActivity {
                     correctAns++;
 
 
-                    score += 20;
+                    score += 10;
                     textViewScore.setText("Score: " + String.valueOf(score));
                     correctDialog.correctDialog(score,this);
 
@@ -290,7 +306,7 @@ public class IndoQuiz extends AppCompatActivity {
                     correctAns++;
 
 
-                    score += 20;
+                    score += 10;
                     textViewScore.setText("Score: " + String.valueOf(score));
                     correctDialog.correctDialog(score,this);
 
@@ -323,7 +339,7 @@ public class IndoQuiz extends AppCompatActivity {
                     correctAns++;
 
 
-                    score += 20;
+                    score += 10;
                     textViewScore.setText("Score: " + String.valueOf(score));
                     correctDialog.correctDialog(score,this);
 

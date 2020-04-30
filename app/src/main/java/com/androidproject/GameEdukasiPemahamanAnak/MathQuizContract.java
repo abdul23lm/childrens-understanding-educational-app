@@ -8,9 +8,10 @@ public final class MathQuizContract {
     public MathQuizContract(){
     }
 
-     public static class QuestionTable implements BaseColumns {
+     public static class MathQuestionTable implements BaseColumns {
 
          public static final String TABLE_NAME = "quiz_questions";
+         public static final String COLUMN_IMAGE = "image";
          public static final String COLUMN_QUESTION = "question";
          public static final String COLUMN_OPTION1 = "option1";
          public static final String COLUMN_OPTION2 = "option2";
@@ -19,6 +20,5 @@ public final class MathQuizContract {
 
 
      }
-
 
 }

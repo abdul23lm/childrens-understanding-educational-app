@@ -7,22 +7,28 @@ public class EnglishQuestions {
     private String option2;
     private String option3;
     private int answerNr;
+    private String object;
 
-    public EnglishQuestions(){
 
-    }
-
-    public EnglishQuestions(String question, String option1, String option2, String option3, int answerNr) {
+    public EnglishQuestions(String question, String object, String option1, String option2, String option3, int answerNr) {
         this.question = question;
+        this.object = object;
         this.option1 = option1;
         this.option2 = option2;
         this.option3 = option3;
         this.answerNr = answerNr;
     }
 
-    public String getQuestion() {
-        return question;
+    public EnglishQuestions(){
+
     }
+
+    public String getObject() {
+        return object;
+    }
+
+    public void setObject(String object) { this.object = object; }
+
 
     public void setQuestion(String question) {
         this.question = question;
@@ -59,4 +65,6 @@ public class EnglishQuestions {
     public void setAnswerNr(int answerNr) {
         this.answerNr = answerNr;
     }
+
+    public String getQuestion() { return question; }
 }

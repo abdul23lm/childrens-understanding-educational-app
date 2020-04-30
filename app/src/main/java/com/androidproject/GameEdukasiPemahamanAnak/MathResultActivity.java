@@ -9,10 +9,12 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+//Ini logika halaman hasil
+
 public class MathResultActivity extends AppCompatActivity {
 
     TextView txtHighScore;
-    TextView txtTotalQuizQues,txtCorrectQues,txtWrongQues;
+    TextView txtCorrectQues,txtWrongQues,txtBriliancy;
 
     Button btStartQuiz;
     Button btMainMenu;
@@ -32,16 +34,16 @@ public class MathResultActivity extends AppCompatActivity {
         btMainMenu = findViewById(R.id.result_bt_mainmenu);
         btStartQuiz = findViewById(R.id.result_bt_playAgain);
         txtHighScore = findViewById(R.id.result_text_High_Score);
-        txtTotalQuizQues = findViewById(R.id.result_total_Ques);
         txtCorrectQues = findViewById(R.id.result_Correct_Ques);
         txtWrongQues = findViewById(R.id.result_Wrong_Ques);
+        txtBriliancy = findViewById(R.id.result_briliancy);
 
 
         btMainMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(MathResultActivity.this,PlayActivity.class);
+                Intent intent = new Intent(MathResultActivity.this,ChooseMenu.class);
                 startActivity(intent);
 
             }
@@ -52,7 +54,7 @@ public class MathResultActivity extends AppCompatActivity {
             public void onClick(View v) {
 
 
-                Intent intent = new Intent(MathResultActivity.this, ChooseQuiz.class);
+                Intent intent = new Intent(MathResultActivity.this, MathQuiz.class);
                 startActivity(intent);
             }
         });
@@ -63,14 +65,14 @@ public class MathResultActivity extends AppCompatActivity {
         Intent intent = getIntent();
 
         int score = intent.getIntExtra("UserScore",0);
-        int totalQuestion = intent.getIntExtra("TotalQuestion",0);
         int correctQues = intent.getIntExtra("CorrectQues",0);
         int wrongQues = intent.getIntExtra("WrongQues",0);
 
+        setText(score);
+        txtCorrectQues.setText("Benar: " + String.valueOf(correctQues));
+        txtWrongQues.setText("Salah: " + String.valueOf(wrongQues));
 
-        txtTotalQuizQues.setText("Total Ques: " + String.valueOf(totalQuestion));
-        txtCorrectQues.setText("Correct: " + String.valueOf(correctQues));
-        txtWrongQues.setText("Wrong: " + String.valueOf(wrongQues));
+
 
         if (score > highScore){
 
@@ -80,36 +82,51 @@ public class MathResultActivity extends AppCompatActivity {
 
     }
 
+
     private void updatHighScore(int newHighScore) {
 
         highScore = newHighScore;
-        txtHighScore.setText("High Score: " + String.valueOf(highScore));
-
-        SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFERRENCE,MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putInt(SHARED_PREFERRENCE_HIGH_SCORE,highScore);
-        editor.apply();
+        txtHighScore.setText(" " + String.valueOf(highScore));
 
 
     }
-
+//
     private void loadHighScore() {
 
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFERRENCE,MODE_PRIVATE);
         highScore = sharedPreferences.getInt(SHARED_PREFERRENCE_HIGH_SCORE,0);
-        txtHighScore.setText("High Score: " + String.valueOf(highScore));
+        txtHighScore.setText(" " + String.valueOf(highScore));
 
+    }
+
+    private void setText(int s){
+
+        if(s > 80) {
+            txtBriliancy.setText("Wah Kamu Pintar\uD83E\uDD17");
+        }
+        else if (s > 50) {
+            txtBriliancy.setText("Ayo Tingkatkan Lagi\uD83D\uDE09");
+        }
+        else if (s > 30) {
+            txtBriliancy.setText("Semangat Kamu Pasti Bisa\uD83D\uDCAA\uD83C\uDFFB");
+        }
+        else if (s > 10) {
+            txtBriliancy.setText("Jangan Menyerah!!!");
+        }
+        else if (s > 0) {
+            txtBriliancy.setText("Ayo Coba lagi☺️");
+        }
     }
 
     @Override
     public void onBackPressed() {
         if (backPressedTime + 2000 > System.currentTimeMillis()){
 
-            Intent intent = new Intent(MathResultActivity.this,PlayActivity.class);
+            Intent intent = new Intent(MathResultActivity.this, ChooseMenu.class);
             startActivity(intent);
 
         }else {
-            Toast.makeText(this, "Press Again to Exit", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Tekan lagi untuk kembali", Toast.LENGTH_SHORT).show();
 
         }
         backPressedTime = System.currentTimeMillis();

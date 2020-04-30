@@ -18,7 +18,7 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:text="Skor Kamu Adalah"
+            android:text="Nilai Kamu "
             android:textSize="32dp"
             android:textColor="#52A5FF"
             android:textStyle="bold"
@@ -30,7 +30,6 @@
 
         <TextView
             android:id="@+id/result_text_High_Score"
-            android:text="100"
             android:textSize="40sp"
             android:textColor="#52A5FF"
             android:textStyle="bold"
@@ -40,16 +39,7 @@
             android:padding="10dp"
             android:layout_height="wrap_content" />
 
-        <TextView
-            android:id="@+id/result_total_Ques"
-            android:text="Total Soal: "
-            android:textSize="30sp"
-            android:textColor="#52A5FF"
-            android:textAlignment="textStart"
-            android:layout_width="match_parent"
-            android:layout_marginBottom="7dp"
-            android:padding="10dp"
-            android:layout_height="wrap_content" />
+
         <TextView
             android:id="@+id/result_Correct_Ques"
             android:text="Benar: "
@@ -69,6 +59,14 @@
             android:layout_width="match_parent"
             android:padding="10dp"
             android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/result_briliancy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textAlignment="center"
+            android:textColor="#52A5FF"
+            android:textSize="26sp" />
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"

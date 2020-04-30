@@ -1,5 +1,9 @@
 package com.androidproject.GameEdukasiPemahamanAnak;
 
+
+import android.graphics.Bitmap;
+
+
 public class MathQuestions {
 
     private String question;
@@ -7,17 +11,28 @@ public class MathQuestions {
     private String option2;
     private String option3;
     private int answerNr;
+    private String object;
 
-    public MathQuestions(){
 
-    }
-
-    public MathQuestions(String question, String option1, String option2, String option3, int answerNr) {
+    public MathQuestions(String question, String object, String option1, String option2, String option3, int answerNr) {
         this.question = question;
+        this.object = object;
         this.option1 = option1;
         this.option2 = option2;
         this.option3 = option3;
         this.answerNr = answerNr;
+    }
+
+    public MathQuestions() {
+
+    }
+
+    public String getObject() {
+        return object;
+    }
+
+    public void setObject(String object) {
+        this.object = object;
     }
 
     public String getQuestion() {

@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.io.IOException;
+
 public class MathWrongDialog {
 
 
@@ -22,8 +24,8 @@ public class MathWrongDialog {
     }
 
 
-    public void wrongDialog(String correctAnswer,final MathQuiz quizActivity){
-        mquizActivity = quizActivity;
+    public void wrongDialog(String correctAnswer,final MathQuiz mathQuizActivity){
+        mquizActivity = mathQuizActivity;
         wrongDialog = new Dialog(mContext);
         wrongDialog.setContentView(R.layout.wrong_dialog);
         Button btWrongDialog = (Button) wrongDialog.findViewById(R.id.bt_wrong_dialog);
@@ -35,7 +37,11 @@ public class MathWrongDialog {
             @Override
             public void onClick(View v) {
                 wrongDialog.dismiss();
-                mquizActivity.showQuestions();
+                try {
+                    mquizActivity.showQuestions();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
         });
 

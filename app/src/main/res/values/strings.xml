@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Game Edukasi Pemahaman Anak</string>
+    <string name="list">
+    <ol>Pada game ini terdiri dari 10 soal pilihan ganda pada masing-masing pelajaran secara acak</ol>\n
+    <ol>Kamu dapat memilih pelajaran terlebih dahulu sebelum mengisi soal dari setiap pelajaran.</ol>\n
+    <ol>Jika setiap soal kamu jawab benar maka kamu dapat poin 10.</ol>\n
+        <ol>Jika setiap soal kamu jawab salah maka poinmu berkurang.</ol>\n
+    </string>
 </resources>
+

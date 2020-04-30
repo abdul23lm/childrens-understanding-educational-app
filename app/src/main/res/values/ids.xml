@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="userinput" type="id" />
+    <item name="confirm" type="id" />
+    <item name="button_exit" type="id" />
+</resources>

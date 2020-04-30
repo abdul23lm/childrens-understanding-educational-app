@@ -15,6 +15,7 @@ public class PlayActivity extends AppCompatActivity {
 
     private long backPressedTime;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,7 +27,7 @@ public class PlayActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(PlayActivity.this, ChooseQuiz.class);
+                Intent intent = new Intent(PlayActivity.this, ChooseMenu.class);
                 startActivity(intent);
 
             }
@@ -34,6 +35,7 @@ public class PlayActivity extends AppCompatActivity {
 
 
     }
+
 
 
     @Override

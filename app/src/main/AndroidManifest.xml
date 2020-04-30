@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.androidproject.GameEdukasiPemahamanAnak">
 
+    <uses-permission android:name="android.permission.INTERNET" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -14,7 +15,13 @@
         <activity android:name="com.androidproject.GameEdukasiPemahamanAnak.EnglishQuiz"/>
         <activity android:name="com.androidproject.GameEdukasiPemahamanAnak.PlayActivity" />
         <activity android:name="com.androidproject.GameEdukasiPemahamanAnak.MathResultActivity" />
+        <activity android:name="com.androidproject.GameEdukasiPemahamanAnak.IndoResultActivity" />
+        <activity android:name="com.androidproject.GameEdukasiPemahamanAnak.EnglishResultActivity" />
+        <activity android:name="com.androidproject.GameEdukasiPemahamanAnak.ChooseMenu"/>
         <activity android:name="com.androidproject.GameEdukasiPemahamanAnak.ChooseQuiz"/>
+        <activity android:name="com.androidproject.GameEdukasiPemahamanAnak.AboutGame"/>
+        <activity android:name="com.androidproject.GameEdukasiPemahamanAnak.TutorialGame"/>
+        <activity android:name="com.androidproject.GameEdukasiPemahamanAnak.FillName"/>
         <activity android:name="com.androidproject.GameEdukasiPemahamanAnak.SplashScreen">
 
             <intent-filter>

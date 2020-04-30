@@ -12,28 +12,33 @@ import android.widget.TextView;
 
 import static java.lang.Thread.sleep;
 
+
+
 public class SplashScreen extends AppCompatActivity {
 
     private final static int EXIT_CODE = 100;
 
+
     TextView txtSplashText;
     ImageView imgViewLogo;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash_screen);
 
-        txtSplashText = findViewById(R.id.textviewLogoText);
-        imgViewLogo = findViewById(R.id.imgviewLogo);
+            @Override
+            protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_splash_screen);
 
 
-        Animation animation = AnimationUtils.loadAnimation(this,R.anim.trasnsition);
-        imgViewLogo.setAnimation(animation);
-        txtSplashText.setAnimation(animation);
+            txtSplashText = findViewById(R.id.textviewLogoText);
+            imgViewLogo = findViewById(R.id.imgviewLogo);
 
 
-        Thread thread = new Thread(new Runnable() {
+            Animation animation = AnimationUtils.loadAnimation(this,R.anim.trasnsition);
+            imgViewLogo.setAnimation(animation);
+            txtSplashText.setAnimation(animation);
+
+
+            Thread thread = new Thread(new Runnable() {
             @Override
             public void run() {
 
@@ -49,7 +54,7 @@ public class SplashScreen extends AppCompatActivity {
                 }finally {
 
 
-                    GotoPlayActivity();
+                    GotoIsiNama();
 
                 }
 
@@ -60,11 +65,13 @@ public class SplashScreen extends AppCompatActivity {
 
     }
 
-    private void GotoPlayActivity() {
+    private void GotoIsiNama() {
 
-        startActivityForResult( new Intent(SplashScreen.this,PlayActivity.class),EXIT_CODE);
+
+        startActivityForResult( new Intent(SplashScreen.this, FillName.class),EXIT_CODE);
 
     }
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
@@ -87,6 +94,6 @@ public class SplashScreen extends AppCompatActivity {
         super.onStop();
         Log.i("BUGBUG","onStop() in SplashActivity");
         finish();
-
     }
+
 }
