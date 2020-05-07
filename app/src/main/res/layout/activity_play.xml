@@ -20,7 +20,7 @@
         android:textAlignment="center"
         android:textColor="#F3EEEE"
         android:layout_marginBottom="40dp"
-        android:textSize="20dp"/>
+        android:textSize="30dp"/>
     <ImageView
         android:layout_width="264dp"
         android:layout_height="264dp"
