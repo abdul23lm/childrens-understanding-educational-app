@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7b069ec0-7594-43b9-847b-1d6e6b1fa597" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/.idea/assetWizardSettings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/java/com/androidproject/GameEdukasiPemahamanAnak/AboutGame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/java/com/androidproject/GameEdukasiPemahamanAnak/ChooseMenu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/java/com/androidproject/GameEdukasiPemahamanAnak/QuizContract.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/java/com/androidproject/GameEdukasiPemahamanAnak/TutorialGame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/res/layout/activity_about_game.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/res/layout/activity_main_menu.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/res/values/ic_launcher_background.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/java/com/androidproject/GameEdukasiPemahamanAnak/ChooseQuiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/java/com/androidproject/GameEdukasiPemahamanAnak/ChooseQuiz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/java/com/androidproject/GameEdukasiPemahamanAnak/EnglishCorrectDialog.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/java/com/androidproject/GameEdukasiPemahamanAnak/EnglishQuestions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/java/com/androidproject/GameEdukasiPemahamanAnak/EnglishQuiz.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/java/com/androidproject/GameEdukasiPemahamanAnak/EnglishQuizContract.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/java/com/androidproject/GameEdukasiPemahamanAnak/EnglishQuizDbHelper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/java/com/androidproject/GameEdukasiPemahamanAnak/EnglishResultActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/java/com/androidproject/GameEdukasiPemahamanAnak/EnglishWrongDialog.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/java/com/androidproject/GameEdukasiPemahamanAnak/IndoCorrectDialog.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/java/com/androidproject/GameEdukasiPemahamanAnak/IndoQuestions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/java/com/androidproject/GameEdukasiPemahamanAnak/IndoQuiz.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/java/com/androidproject/GameEdukasiPemahamanAnak/IndoQuizContract.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/java/com/androidproject/GameEdukasiPemahamanAnak/IndoQuizDbHelper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/java/com/androidproject/GameEdukasiPemahamanAnak/IndoResultActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/java/com/androidproject/GameEdukasiPemahamanAnak/IndoWrongDialog.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/java/com/androidproject/GameEdukasiPemahamanAnak/MathCorrectDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/java/com/androidproject/GameEdukasiPemahamanAnak/MathCorrectDialog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/java/com/androidproject/GameEdukasiPemahamanAnak/MathQuiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/java/com/androidproject/GameEdukasiPemahamanAnak/MathQuiz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/java/com/androidproject/GameEdukasiPemahamanAnak/MathQuizContract.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/java/com/androidproject/GameEdukasiPemahamanAnak/MathQuizDbHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/java/com/androidproject/GameEdukasiPemahamanAnak/MathQuizDbHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/java/com/androidproject/GameEdukasiPemahamanAnak/MathResultActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/java/com/androidproject/GameEdukasiPemahamanAnak/MathResultActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/java/com/androidproject/GameEdukasiPemahamanAnak/MathWrongDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/java/com/androidproject/GameEdukasiPemahamanAnak/MathWrongDialog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/java/com/androidproject/GameEdukasiPemahamanAnak/PlayActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/java/com/androidproject/GameEdukasiPemahamanAnak/PlayActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/res/layout/activity_choose_quiz.xml" beforeDir="false" afterPath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/res/layout/activity_choose_quiz.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/res/layout/activity_english_quiz.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/res/layout/activity_english_result.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/res/layout/activity_indo_quiz.xml" beforeDir="false" afterPath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/res/layout/activity_indo_quiz.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/res/layout/activity_indo_result.xml" beforeDir="false" afterPath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/res/layout/activity_indo_result.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/res/layout/activity_math_quiz.xml" beforeDir="false" afterPath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/res/layout/activity_math_quiz.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/res/layout/activity_play.xml" beforeDir="false" afterPath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/res/layout/activity_play.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/res/layout/activity_splash_screen.xml" beforeDir="false" afterPath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/res/layout/activity_splash_screen.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/res/layout/activity_tutorial_game.xml" beforeDir="false" afterPath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/res/layout/activity_tutorial_game.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" afterPath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" afterPath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" afterPath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" afterPath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" afterPath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" afterPath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" afterPath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/GameEdukasiPemahamanAnak/app/src/main/res/values/styles.xml" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/GameEdukasiPemahamanAnak" />
+  </component>
+  <component name="ProjectId" id="1aqP2paP6TmZYz21FdmEZrBOH7B" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Kuliah\Skripsi\GameEdukasiPemahamanAnak versi 0.6\GameEdukasiPemahamanAnak\app" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7b069ec0-7594-43b9-847b-1d6e6b1fa597" name="Default Changelist" comment="" />
+      <created>1587459946518</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587459946518</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
