@@ -17,7 +17,7 @@ public class ChooseQuiz extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choose_quiz);
         tvNama = findViewById(R.id.edt_nama);
-        tvNama.setText("Halo, " + Preferences.getLoggedInUser(getBaseContext()));
+        tvNama.setText("Hallo, " + Preferences.getLoggedInUser(getBaseContext()));
 
         Button btmath = findViewById(R.id.button_math);
         Button btindo = findViewById(R.id.button_indo);

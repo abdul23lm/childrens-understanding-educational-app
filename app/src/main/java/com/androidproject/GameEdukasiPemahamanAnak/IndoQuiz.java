@@ -71,7 +71,7 @@ public class IndoQuiz extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_indo_quiz);
         tvNama = findViewById(R.id.edt_nama);
-        tvNama.setText("Halo, "+ Preferences.getLoggedInUser(getBaseContext()));
+        tvNama.setText("Hallo, "+ Preferences.getLoggedInUser(getBaseContext()));
 
         setupUI();
 

@@ -29,7 +29,7 @@ public class ChooseMenu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
         tvNama = findViewById(R.id.edt_nama);
-        tvNama.setText("Halo, " + Preferences.getLoggedInUser(getBaseContext()));
+        tvNama.setText("Hallo, " + Preferences.getLoggedInUser(getBaseContext()));
 
 
         btn_play = (Button) findViewById(R.id.button_play);
