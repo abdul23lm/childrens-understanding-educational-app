@@ -40,7 +40,6 @@
         android:id="@+id/bt_playbutton"
         android:layout_width="140dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:background="@drawable/rounded_yellow_corners"
         android:padding="10dp"
         android:text="Mulai"
