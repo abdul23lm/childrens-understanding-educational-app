@@ -26,14 +26,14 @@ public class SplashScreen extends AppCompatActivity {
             @Override
             protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
-            setContentView(R.layout.activity_splash_screen);
+            setContentView(R.layout.activity_splashscreen);
 
 
             txtSplashText = findViewById(R.id.textviewLogoText);
             imgViewLogo = findViewById(R.id.imgviewLogo);
 
 
-            Animation animation = AnimationUtils.loadAnimation(this,R.anim.trasnsition);
+            Animation animation = AnimationUtils.loadAnimation(this,R.anim.transition);
             imgViewLogo.setAnimation(animation);
             txtSplashText.setAnimation(animation);
 

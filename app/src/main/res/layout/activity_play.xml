@@ -1,43 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="40dp"
-    android:gravity="center"
     android:background="@drawable/main_bg"
-    android:orientation="vertical"
     tools:context=".PlayActivity">
 
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:textStyle="bold"
         android:text="Game Edukasi Pemahaman Belajar Pada Anak"
         android:textAlignment="center"
         android:textColor="#F3EEEE"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:textFontWeight="bold"
+        android:layout_marginTop="96dp"
         android:layout_marginBottom="40dp"
-        android:textSize="30dp"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.103" />
+
     <ImageView
+        android:id="@+id/imageView"
         android:layout_width="264dp"
         android:layout_height="264dp"
-        android:layout_marginBottom="30dp"
-        android:src="@drawable/logo" />
+        android:layout_marginTop="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.546"
+        app:srcCompat="@drawable/logo" />
 
     <Button
         android:id="@+id/bt_playbutton"
-        android:layout_width="200dp"
+        android:layout_width="140dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/button_play_bg"
-        android:padding="10dp"
+        android:background="@drawable/rounded_yellow_corners"
         android:text="Mulai"
+        android:padding="10dp"
         android:textAllCaps="false"
         android:textColor="#F3EEEE"
-        android:textSize="32dp"
+        android:textSize="22dp"
         android:textStyle="bold"
-        />
-</LinearLayout>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.816" />
+</android.support.constraint.ConstraintLayout>
